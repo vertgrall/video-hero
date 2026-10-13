@@ -28,7 +28,7 @@
       weather: true,
     },
     {
-      src: "img/mohawk-office.jpg",
+      src: "img/mohawk-office-room.jpg",
       in: 6.6,
       out: 10.6,
       zoom: [1.08, 1.18],
