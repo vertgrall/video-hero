@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Tower — Mohawk</title>
+    <meta
+      name="description"
+      content="New Tower. Mohawk is the first product."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/hero.css" />
+  </head>
+  <body>
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-media" aria-hidden="true">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-wash"></div>
+        <div class="hero-grain"></div>
+        <div class="hero-vignette"></div>
+      </div>
+
+      <header class="nav">
+        <a class="logo" href="#">New Tower</a>
+        <nav>
+          <a href="#mohawk">Mohawk</a>
+          <a href="#company">Company</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <div class="hero-copy">
+        <p class="eyebrow">New Tower · First product</p>
+        <h1>Mohawk</h1>
+        <p class="lede">
+          The first product from New Tower. Built in the long industrial dark,
+          under a stone rise that does not sleep.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#mohawk">See Mohawk</a>
+          <a class="btn ghost" href="#company">The company</a>
+        </div>
+      </div>
+
+      <div class="hero-meta">
+        <a class="scroll" href="#mohawk">
+          <span>Scroll</span>
+          <i></i>
+        </a>
+      </div>
+    </section>
+
+    <main>
+      <section class="section" id="mohawk">
+        <div class="section-head">
+          <p class="kicker">First product</p>
+          <h2>Mohawk</h2>
+        </div>
+        <div class="work-grid">
+          <article class="card card-a">
+            <div class="still"></div>
+            <div class="card-copy">
+              <p>01 / Origin</p>
+              <h3>Yard-born</h3>
+            </div>
+          </article>
+          <article class="card card-b">
+            <div class="still"></div>
+            <div class="card-copy">
+              <p>02 / Build</p>
+              <h3>Stone hours</h3>
+            </div>
+          </article>
+          <article class="card card-c">
+            <div class="still"></div>
+            <div class="card-copy">
+              <p>03 / Field</p>
+              <h3>Night shift</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section studio" id="company">
+        <div class="studio-grid">
+          <div>
+            <p class="kicker">The company</p>
+            <h2>New Tower</h2>
+          </div>
+          <div class="studio-copy">
+            <p>
+              New Tower is the company. Mohawk is the first thing it ships.
+            </p>
+            <p>
+              The opening frame is the work: a rundown industrial yard, and
+              far off a dark stone tower — a hundred stories and still
+              climbing — with lights held in the windows.
+            </p>
+            <ul>
+              <li>Company — New Tower</li>
+              <li>First product — Mohawk</li>
+              <li>Hero — animated industrial loop</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="contact-panel">
+          <p class="kicker">Contact</p>
+          <h2>Talk to New Tower.</h2>
+          <form class="contact-form" action="#" method="post">
+            <label>
+              Name
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label class="full">
+              Note
+              <textarea name="project" rows="4" required></textarea>
+            </label>
+            <button class="btn primary" type="submit">Send note</button>
+          </form>
+          <p class="form-status" hidden></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="logo" href="#">New Tower</a>
+      <p>Mohawk · First product</p>
+    </footer>
+
+    <script src="js/hero.js"></script>
+  </body>
+</html>
