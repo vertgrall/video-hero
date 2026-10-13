@@ -8,28 +8,12 @@
   const LOOP = 18;
   const shots = [
     {
-      src: "img/company-room.jpg?v=2",
-      in: 16.8,
-      out: 6.4,
-      zoom: [1.08, 1.16],
-      pan: [0, 0.02],
-      tilt: [0.02, -0.02],
-    },
-    {
-      src: "img/company-press.jpg?v=2",
-      in: 5.4,
-      out: 11.2,
-      zoom: [1.08, 1.14],
-      pan: [0.01, -0.01],
-      tilt: [0, -0.01],
-    },
-    {
-      src: "img/company-window.jpg?v=2",
-      in: 10.2,
-      out: 17.4,
-      zoom: [1.1, 1.2],
-      pan: [0, 0.01],
-      tilt: [0.01, -0.04],
+      src: "img/company-briefing.jpg",
+      in: 0,
+      out: LOOP,
+      zoom: [1.04, 1.1],
+      pan: [0, 0.012],
+      tilt: [0.01, -0.01],
     },
   ];
 
@@ -44,14 +28,6 @@
     r: 0.6 + Math.random() * 1.4,
     drift: 0.00012 + Math.random() * 0.0003,
     rise: 0.00008 + Math.random() * 0.00018,
-    alpha: 0.04 + Math.random() * 0.08,
-  }));
-
-  const rain = Array.from({ length: 90 }, () => ({
-    x: Math.random(),
-    y: Math.random(),
-    len: 8 + Math.random() * 14,
-    speed: 0.32 + Math.random() * 0.5,
     alpha: 0.04 + Math.random() * 0.08,
   }));
 
@@ -126,21 +102,6 @@
       ctx.fill();
     });
 
-    const windowWeight = alphaOf(time, shots[2]);
-    rain.forEach((drop) => {
-      drop.y += drop.speed * 0.016;
-      drop.x += 0.0005;
-      if (drop.y > 1.1) {
-        drop.y = -0.04;
-        drop.x = Math.random();
-      }
-      ctx.globalAlpha = drop.alpha * (0.25 + windowWeight * 0.9);
-      ctx.strokeStyle = "rgba(210, 220, 230, 0.7)";
-      ctx.beginPath();
-      ctx.moveTo(drop.x * width, drop.y * height);
-      ctx.lineTo(drop.x * width + 1.5, drop.y * height + drop.len);
-      ctx.stroke();
-    });
     ctx.globalAlpha = 1;
   }
 
@@ -153,7 +114,7 @@
 
     shots.forEach((shot) => {
       const local = localOf(time, shot);
-      const alpha = alphaOf(time, shot);
+      const alpha = shots.length === 1 ? 1 : alphaOf(time, shot);
       if (local < 0 || alpha <= 0) return;
       const zoom = shot.zoom[0] + (shot.zoom[1] - shot.zoom[0]) * local;
       const pan = shot.pan[0] + (shot.pan[1] - shot.pan[0]) * local;
