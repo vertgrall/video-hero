@@ -453,6 +453,49 @@ a {
   letter-spacing: 0.04em;
 }
 
+.floor {
+  border-bottom: 1px solid var(--line);
+}
+
+.floor .section-head p {
+  max-width: 28rem;
+  margin: 1.1rem 0 0;
+  line-height: 1.7;
+  opacity: 0.78;
+}
+
+.floor-list {
+  display: grid;
+  gap: clamp(2.6rem, 6vw, 4.2rem);
+}
+
+.floor-list figure {
+  margin: 0;
+}
+
+.floor-list img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.floor-list figcaption {
+  margin: 0.8rem 0 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+.floor-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1rem, 2vw, 1.4rem);
+  align-items: start;
+}
+
 .contact-panel {
   max-width: 40rem;
 }
@@ -544,6 +587,7 @@ a {
 @media (max-width: 860px) {
   .work-grid,
   .studio-grid,
+  .floor-pair,
   .contact-form,
   .beat,
   .beat-flip {
