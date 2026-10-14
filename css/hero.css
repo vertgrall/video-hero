@@ -453,6 +453,16 @@ a {
   letter-spacing: 0.04em;
 }
 
+.page-nav {
+  padding: 1.5rem clamp(1.25rem, 4vw, 3.5rem) 0;
+}
+
+.hero > .footer {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
 .floor {
   border-bottom: 1px solid var(--line);
 }
