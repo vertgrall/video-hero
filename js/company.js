@@ -8,7 +8,7 @@
   const LOOP = 18;
   const shots = [
     {
-      src: "img/company-briefing-desk.jpg",
+      src: "img/company-briefing-evening.jpg",
       in: 0,
       out: LOOP,
       zoom: [1.04, 1.1],
