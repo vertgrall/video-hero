@@ -8,12 +8,12 @@
   const LOOP = 18;
   const shots = [
     {
-      src: "img/company-briefing-lab.jpg",
+      src: "img/company-briefing-lab.jpg?v=soft",
       in: 0,
       out: LOOP,
-      zoom: [1.04, 1.1],
-      pan: [0, 0.012],
-      tilt: [0.01, -0.01],
+      zoom: [1, 1],
+      pan: [0, 0],
+      tilt: [0, 0],
     },
   ];
 
@@ -69,23 +69,17 @@
     return Math.max(0, Math.min(local / fade, (1 - local) / fade, 1));
   }
 
-  function drawCover(img, zoom, panX, panY, alpha) {
+  function drawContain(img, alpha) {
     if (!img.naturalWidth || alpha <= 0.01) return;
     ctx.save();
     ctx.globalAlpha = alpha;
     const imgRatio = img.naturalWidth / img.naturalHeight;
     const viewRatio = width / height;
-    let dw = width * zoom;
-    let dh = height * zoom;
-    if (imgRatio > viewRatio) dw = dh * imgRatio;
-    else dh = dw / imgRatio;
-    ctx.drawImage(
-      img,
-      (width - dw) / 2 + panX * width,
-      (height - dh) / 2 + panY * height,
-      dw,
-      dh
-    );
+    let dw = width;
+    let dh = height;
+    if (imgRatio > viewRatio) dh = width / imgRatio;
+    else dw = height * imgRatio;
+    ctx.drawImage(img, (width - dw) / 2, (height - dh) / 2, dw, dh);
     ctx.restore();
   }
 
@@ -116,10 +110,7 @@
       const local = localOf(time, shot);
       const alpha = shots.length === 1 ? 1 : alphaOf(time, shot);
       if (local < 0 || alpha <= 0) return;
-      const zoom = shot.zoom[0] + (shot.zoom[1] - shot.zoom[0]) * local;
-      const pan = shot.pan[0] + (shot.pan[1] - shot.pan[0]) * local;
-      const tilt = shot.tilt[0] + (shot.tilt[1] - shot.tilt[0]) * local;
-      drawCover(shot.img, zoom, pan, tilt, alpha);
+      drawContain(shot.img, alpha);
     });
 
     drawAtmosphere(time);
@@ -133,7 +124,7 @@
     if (running) return;
     resize();
     if (reduceMotion) {
-      drawCover(shots[0].img, 1.1, 0, 0, 1);
+      drawContain(shots[0].img, 1);
       return;
     }
     running = true;

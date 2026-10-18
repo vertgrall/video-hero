@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/hero.css?v=tan" />
   </head>
   <body>
     <section class="hero hero-mohawk" aria-label="Mohawk">
@@ -31,6 +31,7 @@
           <a href="mohawk.html" aria-current="page">Mohawk</a>
           <a href="company.html">Company</a>
           <a href="blog.html">Blog</a>
+          <a href="roadmap.html">Roadmap</a>
           <a href="index.html#contact">Contact</a>
         </nav>
       </header>
@@ -117,14 +118,89 @@
             <span class="pin" style="--x: 48%; --y: 94%">You finish here</span>
           </figure>
         </article>
+
+        <div class="sheet-spotlight">
+          <p class="kicker">On the glass</p>
+          <h2 class="spotlight-title">The desk you pick. The pane that stays open.</h2>
+          <p class="spotlight-deck">
+            Mohawk is not a tab hoarder. It is a split view with opinions:
+            grid on the left, the article on the right, and enough metadata
+            that you can trust what you are about to read.
+          </p>
+        </div>
+
+        <article class="beat">
+          <div class="beat-copy">
+            <p>Art</p>
+            <h3>Split view, still Mohawk.</h3>
+            <p>
+              Pick a desk — Art, News, Tech — and the grid fills with stories
+              you have not opened yet. Tap one: the piece loads beside the pile,
+              not on top of it. Unread dots, trail tags, timestamps. The chrome
+              stays out of the way; the reading surface stays white.
+            </p>
+          </div>
+          <figure class="plate plate-night">
+            <img
+              src="img/app/mohawk-art-split.jpg"
+              alt="Mohawk in dark mode on the Art desk: story grid on the left, article reader on the right."
+            />
+          </figure>
+        </article>
+
+        <article class="beat beat-flip">
+          <div class="beat-copy">
+            <p>Search</p>
+            <h3>Trails, regions, and a translation pass.</h3>
+            <p>
+              Type a topic once. Flip on search trails when you want depth, not
+              just the headline. Set a region, choose a language, and Mohawk runs
+              the query where the story actually lives — so
+              <em>datacenter</em> can become データセンター before you commit
+              to a long read. Results stay in the grid; the reader stays put.
+            </p>
+          </div>
+          <figure class="plate">
+            <img
+              src="img/app/mohawk-search-translate.jpg"
+              alt="Mohawk search for datacenter with Japanese translation enabled and results in the story grid."
+            />
+          </figure>
+        </article>
+
       </section>
     </main>
+
+    <section class="section themes" id="themes">
+      <div class="section-head">
+        <p class="kicker">Themes</p>
+        <h2>The desk changes color.</h2>
+        <p>Same reader. The room you are in decides the light.</p>
+      </div>
+      <div class="theme-grid">
+        <figure>
+          <img src="img/themes/world.jpg" alt="Mohawk in a warm peach light, a story open beside the desk." />
+        </figure>
+        <figure>
+          <img src="img/themes/seattle.jpg" alt="Mohawk in a pale green light, a story open beside the desk." />
+        </figure>
+        <figure>
+          <img src="img/themes/tech.jpg" alt="Mohawk in a light room, a story open beside the desk." />
+        </figure>
+        <figure>
+          <img src="img/themes/news.jpg" alt="Mohawk in a dark violet light, a story open beside the desk." />
+        </figure>
+      </div>
+      <p class="sheet-mark">
+        <img src="img/new-tower-mark-large.jpg?v=tan" alt="New Tower" />
+      </p>
+    </section>
 
     <footer class="footer">
       <a class="logo" href="index.html">New Tower</a>
       <p>Mohawk</p>
     </footer>
 
-    <script src="js/mohawk.js"></script>
+    <script src="js/mohawk.js?v=still"></script>
   </body>
 </html>

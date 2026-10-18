@@ -10,13 +10,13 @@
   const FLASH = 18.42;
   const shots = [
     {
-      src: "img/hero.jpg",
+      src: "img/hero.jpg?v=tall",
       in: 0,
       out: 4.6,
-      zoom: [1.08, 1.28],
-      pan: [0, 0.02],
-      tilt: [0.04, -0.08],
-      weather: true,
+      zoom: [1.04, 1.1],
+      pan: [0, 0.01],
+      tilt: [0.02, -0.02],
+      weather: false,
     },
     {
       src: "img/mohawk-approach.jpg",
@@ -314,51 +314,39 @@
     }
   }
 
-  function start() {
-    if (running) return;
+  const plate = new Image();
+  plate.src = "img/hero.jpg?v=tall";
+
+  function showDesert() {
     resize();
-    if (reduceMotion) {
-      const app = shots.find((shot) => shot.present);
-      hero?.classList.add("reel-product", "reel-sky");
-      drawCrowdBackdrop();
-      if (app?.img?.naturalWidth) drawStage(app.img, 1, 1);
-      else drawCover(shots[0].img, 1.1, 0, 0, 1);
+    hero?.classList.remove("reel-product", "reel-sky");
+    ctx.fillStyle = "#07080b";
+    ctx.fillRect(0, 0, width, height);
+    if (!plate.naturalWidth) {
+      plate.addEventListener("load", showDesert, { once: true });
       return;
     }
-    running = true;
-    startedAt = 0;
-    frame = requestAnimationFrame(paint);
+    drawCover(plate, 1.02, 0, 0, 1);
   }
 
-  window.addEventListener("resize", resize);
+  function start() {
+    showDesert();
+  }
+
+  window.addEventListener("resize", showDesert);
 
   document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-      running = false;
-      cancelAnimationFrame(frame);
-      return;
-    }
-    start();
+    if (!document.hidden) showDesert();
   });
 
   Promise.all([
     new Promise((resolve) => {
-      if (crowd.complete) resolve();
+      if (plate.complete) resolve();
       else {
-        crowd.onload = resolve;
-        crowd.onerror = resolve;
+        plate.onload = resolve;
+        plate.onerror = resolve;
       }
     }),
-    ...shots.filter((shot) => shot.img).map(
-      (shot) =>
-        new Promise((resolve) => {
-          if (shot.img.complete) resolve();
-          else {
-            shot.img.onload = resolve;
-            shot.img.onerror = resolve;
-          }
-        })
-    ),
     document.fonts.ready,
   ]).then(start);
 })();

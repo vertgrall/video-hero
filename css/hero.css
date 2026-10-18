@@ -113,8 +113,70 @@ a {
 }
 
 .nav nav a:hover,
-.nav nav a:focus-visible {
+.nav nav a:focus-visible,
+.nav nav a[data-plate][aria-current="true"] {
   opacity: 1;
+}
+
+.hero-mohawk .nav nav a[href="mohawk.html"] {
+  margin-left: 0.6rem;
+}
+
+.hero-roadmap .hero-plate {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 1.6s ease;
+}
+
+.hero-roadmap .hero-plate.is-visible {
+  opacity: 1;
+  z-index: 1;
+}
+
+.roadmap-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 36rem;
+}
+
+.hero-roadmap .hero-copy .roadmap-list {
+  animation: rise 1.15s var(--ease) 0.12s both;
+}
+
+.roadmap-list li {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.85rem, 2.5vw, 1.25rem);
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--line);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+}
+
+.roadmap-app-icon {
+  flex-shrink: 0;
+  width: clamp(3rem, 7vw, 4.5rem);
+  height: clamp(3rem, 7vw, 4.5rem);
+  border-radius: 22%;
+  object-fit: cover;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.roadmap-list span {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: Outfit, system-ui, sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
 }
 
 .hero-copy {
@@ -262,6 +324,14 @@ a {
 
 .still {
   min-height: 16rem;
+}
+
+.still img {
+  display: block;
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+  object-position: left top;
 }
 
 .card-a .still {
@@ -434,6 +504,43 @@ a {
   background: #e7c27a;
 }
 
+.sheet-spotlight {
+  margin-top: clamp(4.5rem, 10vw, 7rem);
+  padding-top: clamp(2.5rem, 6vw, 4rem);
+  border-top: 1px solid rgba(28, 25, 21, 0.12);
+  max-width: 40rem;
+}
+
+.sheet-spotlight .spotlight-title {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.sheet-spotlight .spotlight-deck {
+  margin: 1.1rem 0 0;
+  line-height: 1.65;
+  opacity: 0.82;
+}
+
+.sheet-spotlight + .beat {
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+.sheet-mark {
+  display: flex;
+  justify-content: flex-end;
+  margin: clamp(3.5rem, 8vw, 5.5rem) 0 0;
+}
+
+.sheet-mark img {
+  display: block;
+  width: clamp(8.5rem, 16vw, 12.5rem);
+  height: auto;
+}
+
 .studio-copy p,
 .footer p {
   margin: 0 0 1rem;
@@ -451,6 +558,52 @@ a {
   padding: 0.7rem 0;
   border-top: 1px solid var(--line);
   letter-spacing: 0.04em;
+}
+
+.studio-copy a {
+  opacity: 0.86;
+}
+
+.studio-copy a:hover,
+.studio-copy a:focus-visible {
+  opacity: 1;
+}
+
+.themes {
+  padding-top: clamp(1.5rem, 4vw, 2.5rem);
+  background: #f3efe6;
+  color: #1c1915;
+}
+
+.themes .kicker {
+  color: #8a6232;
+}
+
+.themes .theme-grid img {
+  border-color: rgba(28, 25, 21, 0.14);
+}
+
+.themes .sheet-mark {
+  justify-content: center;
+  margin-top: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem 1rem;
+}
+
+.theme-grid figure {
+  margin: 0;
+}
+
+.theme-grid img {
+  display: block;
+  width: 70%;
+  height: auto;
+  margin-inline: auto;
+  border: 1px solid var(--line);
 }
 
 .page-nav {
@@ -596,6 +749,7 @@ a {
 
 @media (max-width: 860px) {
   .work-grid,
+  .theme-grid,
   .studio-grid,
   .floor-pair,
   .contact-form,
@@ -689,13 +843,24 @@ a {
 }
 
 .hero-mohawk .nav a[aria-current="page"],
+.hero-roadmap .nav a[aria-current="page"],
 .hero-company .nav a[aria-current="page"] {
   opacity: 1;
 }
 
+.hero-company {
+  height: 100svh;
+  min-height: 100svh;
+  max-height: 100svh;
+}
+
+.hero-company .hero-media canvas {
+  object-fit: contain;
+}
+
 .hero-company .hero-wash {
   background:
-    linear-gradient(180deg, rgba(7, 8, 11, 0.4) 0%, rgba(7, 8, 11, 0.02) 30%, rgba(7, 8, 11, 0.78) 66%, rgba(7, 8, 11, 0.94) 100%);
+    linear-gradient(180deg, rgba(7, 8, 11, 0.28) 0%, rgba(7, 8, 11, 0) 18%, rgba(7, 8, 11, 0) 62%, rgba(7, 8, 11, 0.55) 100%);
 }
 
 @media (prefers-reduced-motion: reduce) {

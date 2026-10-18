@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Tower — Roadmap</title>
+    <meta name="description" content="Mirror2 and the New Tower Shell." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/hero.css?v=roadmap-icons" />
+  </head>
+  <body>
+    <section class="hero hero-roadmap" aria-label="Roadmap">
+      <div class="hero-media" aria-hidden="true">
+        <img class="hero-plate is-visible" id="roadmap-plate-a" src="img/roadmap-intersection-rain.jpg?v=tower" alt="" />
+        <img class="hero-plate" id="roadmap-plate-b" alt="" />
+        <div class="hero-wash"></div>
+        <div class="hero-grain"></div>
+        <div class="hero-vignette"></div>
+      </div>
+
+      <header class="nav">
+        <a class="logo" href="index.html">New Tower</a>
+        <nav>
+          <a href="mohawk.html">Mohawk</a>
+          <a href="company.html">Company</a>
+          <a href="blog.html">Blog</a>
+          <a href="roadmap.html" aria-current="page">Roadmap</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </header>
+
+      <div class="hero-copy">
+        <p class="eyebrow">Roadmap</p>
+        <ul class="roadmap-list">
+          <li>
+            <img class="roadmap-app-icon" src="img/icons/mirror2.png?v=1" width="72" height="72" alt="" />
+            Mirror2
+          </li>
+          <li>
+            <img class="roadmap-app-icon" src="img/icons/nts.png?v=1" width="72" height="72" alt="" />
+            New Tower Shell
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a class="logo" href="index.html">New Tower</a>
+      <p>Mohawk</p>
+    </footer>
+
+    <script>
+      (() => {
+        const plates = [
+          "img/roadmap-intersection-rain.jpg?v=tower",
+          "img/roadmap-intersection-afternoon.jpg?v=tower",
+          "img/roadmap-intersection-night.jpg?v=tower",
+        ];
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const HOLD_MS = 8000;
+        let front = document.getElementById("roadmap-plate-a");
+        let back = document.getElementById("roadmap-plate-b");
+        let index = Math.floor(Math.random() * plates.length);
+
+        plates.forEach((src) => {
+          const img = new Image();
+          img.src = src;
+        });
+
+        front.src = plates[index];
+        front.classList.add("is-visible");
+
+        if (reduceMotion) return;
+
+        function advance() {
+          const nextIndex = (index + 1) % plates.length;
+          back.src = plates[nextIndex];
+          const swap = () => {
+            back.classList.add("is-visible");
+            front.classList.remove("is-visible");
+            [front, back] = [back, front];
+            index = nextIndex;
+          };
+          if (back.complete && back.naturalWidth) swap();
+          else {
+            back.onload = () => {
+              back.onload = null;
+              swap();
+            };
+          }
+        }
+
+        setInterval(advance, HOLD_MS);
+      })();
+    </script>
+  </body>
+</html>
