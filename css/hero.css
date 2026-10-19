@@ -145,6 +145,12 @@ a {
   max-width: 36rem;
 }
 
+.hero-roadmap {
+  min-height: 0;
+  height: clamp(22rem, 62svh, 40rem);
+  max-height: 62svh;
+}
+
 .roadmap-main {
   background: var(--ink);
   color: var(--fog);
