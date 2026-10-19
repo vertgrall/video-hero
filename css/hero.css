@@ -145,20 +145,46 @@ a {
   max-width: 36rem;
 }
 
-.hero-roadmap .hero-copy .roadmap-list {
-  animation: rise 1.15s var(--ease) 0.12s both;
+.roadmap-main {
+  background: var(--ink);
+  color: var(--fog);
+}
+
+.roadmap-sheet {
+  padding-top: clamp(3rem, 8vw, 5rem);
+  padding-bottom: clamp(4rem, 10vw, 7rem);
+}
+
+.roadmap-sheet .roadmap-list {
+  max-width: 44rem;
 }
 
 .roadmap-list li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: clamp(0.85rem, 2.5vw, 1.25rem);
-  padding: 1.1rem 0;
+  padding: 1.35rem 0;
   border-top: 1px solid var(--line);
+}
+
+.roadmap-item-name {
+  margin: 0;
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1;
 }
+
+.roadmap-item-blurb {
+  max-width: 34rem;
+  margin: 0.85rem 0 0;
+  font-family: Outfit, system-ui, sans-serif;
+  font-size: clamp(0.92rem, 1.6vw, 1.05rem);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  opacity: 0.82;
+}
+
 
 .roadmap-app-icon {
   flex-shrink: 0;

@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Tower — Roadmap</title>
-    <meta name="description" content="Mirror2 and the New Tower Shell." />
+    <meta
+      name="description"
+      content="Mirror2 — a Rust photobooth that pushes filters into the paranormal. New Tower Shell — Mohawk’s CLI for RSS exploration."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/hero.css?v=roadmap-icons" />
+    <link rel="stylesheet" href="css/hero.css?v=roadmap-sheet" />
   </head>
   <body>
     <section class="hero hero-roadmap" aria-label="Roadmap">
@@ -36,18 +39,46 @@
 
       <div class="hero-copy">
         <p class="eyebrow">Roadmap</p>
+      </div>
+
+      <div class="hero-meta">
+        <a class="scroll" href="#items">
+          <span>The work</span>
+          <i></i>
+        </a>
+      </div>
+    </section>
+
+    <main class="roadmap-main" id="items">
+      <section class="section roadmap-sheet" aria-label="Roadmap items">
         <ul class="roadmap-list">
           <li>
             <img class="roadmap-app-icon" src="img/icons/mirror2.png?v=1" width="72" height="72" alt="" />
-            Mirror2
+            <div class="roadmap-item-copy">
+              <p class="roadmap-item-name">Mirror2</p>
+              <p class="roadmap-item-blurb">
+                A Rust-powered photobooth built for what happens after the smile. Layer custom high-powered
+                filters, shoot the glass, the street, the face in the mirror — and the reflection stops
+                behaving. Edges drift. Light turns wrong. The more you push, the more paranormal it gets.
+                A camera app where the interesting part is on purpose.
+              </p>
+            </div>
           </li>
           <li>
             <img class="roadmap-app-icon" src="img/icons/nts.png?v=1" width="72" height="72" alt="" />
-            New Tower Shell
+            <div class="roadmap-item-copy">
+              <p class="roadmap-item-name">New Tower Shell</p>
+              <p class="roadmap-item-blurb">
+                Mohawk’s younger command-line brother. A power CLI for RSS and the open web — subscribe,
+                crawl, grep, and pipe feeds through your shell like data, not decoration. Follow threads
+                across sites, fork what you find, and explore the news graph without waiting on a window.
+                For readers who want the raw wire, faster than the app.
+              </p>
+            </div>
           </li>
         </ul>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer class="footer">
       <a class="logo" href="index.html">New Tower</a>
