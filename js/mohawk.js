@@ -135,8 +135,9 @@
 
   function resize() {
     const dpr = Math.min(window.devicePixelRatio || 1, 1.75);
-    width = canvas.clientWidth;
-    height = canvas.clientHeight;
+    const box = hero?.getBoundingClientRect();
+    width = Math.max(1, Math.floor(box?.width || canvas.clientWidth || 0));
+    height = Math.max(1, Math.floor(box?.height || canvas.clientHeight || 0));
     canvas.width = Math.floor(width * dpr);
     canvas.height = Math.floor(height * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -330,10 +331,17 @@
   }
 
   function start() {
-    showDesert();
+    requestAnimationFrame(() => {
+      requestAnimationFrame(showDesert);
+    });
   }
 
   window.addEventListener("resize", showDesert);
+
+  if (typeof ResizeObserver !== "undefined" && hero) {
+    const heroResize = new ResizeObserver(() => showDesert());
+    heroResize.observe(hero);
+  }
 
   document.addEventListener("visibilitychange", () => {
     if (!document.hidden) showDesert();

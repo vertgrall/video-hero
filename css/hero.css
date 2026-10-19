@@ -826,6 +826,13 @@ a {
   }
 }
 
+.hero-mohawk .hero-media canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+}
+
 .hero-mohawk .hero-wash {
   background:
     linear-gradient(180deg, rgba(7, 8, 11, 0.2) 0%, rgba(7, 8, 11, 0.06) 40%, rgba(7, 8, 11, 0.7) 100%);
