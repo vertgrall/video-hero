@@ -1,0 +1,36 @@
+---
+description: Recurring Mohawk gritty-street scene characters for marketing art
+alwaysApply: true
+---
+
+# Mohawk street scene — character references
+
+When generating or extending **gritty nightlife street** art for Mohawk (crowd shots, hero plates, reels):
+
+## Mohawk figure
+
+- Man with **black mohawk**, tight black clothes, **black jacket** (leather or similar) with **small patches**.
+- Often **softened by vapor, steam, or haze** in crowd shots; may read sharper when he is a focal foreground figure.
+
+## Reference female model 1
+
+- **Center of frame**, walking **away from camera** (with model 2).
+- Long **blonde wavy hair**.
+- **Tight short black dress** (thin straps), **black high heels**.
+
+## Reference female model 2
+
+- Beside model 1, walking **away from camera**.
+- Long **dark curly hair**.
+- **Brown or tan jacket/vest** over **short black skirt**, **patterned lace leggings or stockings**, **dark boots**.
+
+## Canonical Mohawk static hero
+
+- **File:** `Site/img/mohawk-hero.jpg`
+- **Source plate:** gritty neon crowd night (`mohawk-hero-gritty-street-source.jpg` in `NewTowerArtWork/img/`)
+- Models 1 & 2 appear in the **center mid-ground** of this hero; Mohawk figure **foreground right**.
+
+## Setting notes
+
+- Night, dense crowd, traffic, neon, steam — see gritty-street studies in `NewTowerArtWork/img/gritty-street/` when needed.
+- Distant **stone obelisk tower** optional in other plates; hero is **street-only** (no tower required in frame).

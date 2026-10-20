@@ -1,0 +1,31 @@
+---
+description: Canonical New Tower stone obelisk for all hero and marketing art
+alwaysApply: true
+---
+
+# New Tower — canonical tower design
+
+From this point forward, **all hero plates and generated graphics** for New Tower use **one tower identity**:
+
+## The tower (required)
+
+- **Form:** Massive ancient **square stone obelisk** — dark weathered rock with **subtle architectural surface detail**: horizontal belt courses, small circular stud/rivet accents, recessed panel lines, corner buttresses; overall still reads smooth and ancient (no long vertical crack scars). **No** Gaelic knotwork or ornate side reliefs.
+- **Light:** Horizontal bands of **small narrow windows** with **detailed recessed stone borders** (thick lintels/frames) and **warm golden interior light** (not neon, not purple). Lit band often mid-shaft on close highway heroes.
+- **Scale:** Always the **tallest** structure in frame; often partially cropped or lost in fog/clouds when appropriate.
+- **Not this tower:** The old cutaway desert monolith (open truss slot, split V crown), generic glass curtain-wall only, unrelated fantasy ziggurats, long vertical crack lines, or ornate Celtic/Gaelic side carvings.
+
+## Reference files (use as `reference_image_paths`)
+
+1. **Primary:** `/Users/jonmcmillion/Documents/Code/NewTower/Site/img/mohawk-hero.jpg`
+2. **Updated (wider + more lit windows):** `/Users/jonmcmillion/Documents/Code/NewTower/Site/img/tower-reference.jpg` when present
+3. **Source mood:** `/Users/jonmcmillion/Documents/Code/NewTower/NewTowerArtWork/img/mohawk-hero-modern-source.jpg`
+
+## Setting
+
+- Pacific Northwest **megacity** when the scene is urban (modern glass, highways, pines, rain, fog), or **desert metropolis** when requested (heat haze, mesas, sodium night light, dense arid sprawl).
+- Highways should show **visible traffic** when the road is in frame; skyline should imply an ** enormous** city when possible.
+- Photorealistic photography only — no illustration style unless the user asks otherwise.
+
+## Archive
+
+Every new generated image still goes to `/Users/jonmcmillion/Documents/Code/NewTower/NewTowerArtWork/` per the artwork archive rule.

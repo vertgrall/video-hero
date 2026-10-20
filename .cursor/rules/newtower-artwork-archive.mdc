@@ -1,0 +1,15 @@
+---
+description: Archive every generated or installed site image to NewTowerArtWork
+alwaysApply: true
+---
+
+# New Tower artwork archive
+
+When creating, generating, or installing any image for the New Tower / Site project:
+
+1. **Always save a copy** to `/Users/jonmcmillion/Documents/Code/NewTower/NewTowerArtWork/`, whether or not the image ships on the live site.
+2. **Preserve structure** under that folder when it helps (e.g. `img/app/`, `img/themes/`, `img/roadmap-intersection.jpg`). Use a clear subfolder for one-offs or rejected drafts (e.g. `img/drafts/` or `assets/`) if they would clutter live paths.
+3. **After GenerateImage** (or any new asset in `.cursor/projects/.../assets/`), copy the file into `NewTowerArtWork` before or when installing to `Site/img/`.
+4. **Do not skip** because an image was rejected, experimental, or only shown in chat — archive it anyway.
+
+The canonical site paths remain under `Site/img/`; `NewTowerArtWork` is the master artwork backup.

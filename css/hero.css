@@ -241,6 +241,14 @@ a {
   animation: rise 1.15s var(--ease) 0.12s both;
 }
 
+.hero-home .hero-copy h1 {
+  font-size: clamp(2.5rem, 7.2vw, 5.1rem);
+}
+
+.hero-home .lede {
+  font-size: clamp(0.9rem, 1.6vw, 1.02rem);
+}
+
 .hero-copy h1 em {
   font-style: italic;
   color: #f4ecde;
@@ -818,6 +826,10 @@ a {
 
   .hero-copy h1 {
     font-size: clamp(3rem, 16vw, 4.6rem);
+  }
+
+  .hero-home .hero-copy h1 {
+    font-size: clamp(2.25rem, 13vw, 3.45rem);
   }
 
   .footer {
