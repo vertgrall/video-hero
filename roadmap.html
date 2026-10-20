@@ -14,13 +14,12 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/hero.css?v=roadmap-layout" />
+    <link rel="stylesheet" href="css/hero.css?v=roadmap-collage2" />
   </head>
   <body>
     <section class="hero hero-roadmap" aria-label="Roadmap">
       <div class="hero-media" aria-hidden="true">
-        <img class="hero-plate is-visible" id="roadmap-plate-a" src="img/roadmap-intersection-rain.jpg?v=tower" alt="" />
-        <img class="hero-plate" id="roadmap-plate-b" alt="" />
+        <img class="hero-plate is-visible" src="img/roadmap-hero.jpg?v=collage2" alt="" />
         <div class="hero-wash"></div>
         <div class="hero-grain"></div>
         <div class="hero-vignette"></div>
@@ -85,49 +84,5 @@
       <p>Mohawk</p>
     </footer>
 
-    <script>
-      (() => {
-        const plates = [
-          "img/roadmap-intersection-rain.jpg?v=tower",
-          "img/roadmap-intersection-afternoon.jpg?v=tower",
-          "img/roadmap-intersection-night.jpg?v=tower",
-        ];
-        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        const HOLD_MS = 8000;
-        let front = document.getElementById("roadmap-plate-a");
-        let back = document.getElementById("roadmap-plate-b");
-        let index = Math.floor(Math.random() * plates.length);
-
-        plates.forEach((src) => {
-          const img = new Image();
-          img.src = src;
-        });
-
-        front.src = plates[index];
-        front.classList.add("is-visible");
-
-        if (reduceMotion) return;
-
-        function advance() {
-          const nextIndex = (index + 1) % plates.length;
-          back.src = plates[nextIndex];
-          const swap = () => {
-            back.classList.add("is-visible");
-            front.classList.remove("is-visible");
-            [front, back] = [back, front];
-            index = nextIndex;
-          };
-          if (back.complete && back.naturalWidth) swap();
-          else {
-            back.onload = () => {
-              back.onload = null;
-              swap();
-            };
-          }
-        }
-
-        setInterval(advance, HOLD_MS);
-      })();
-    </script>
   </body>
 </html>

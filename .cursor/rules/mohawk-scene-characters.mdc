@@ -5,7 +5,9 @@ alwaysApply: true
 
 # Mohawk street scene — character references
 
-When generating or extending **gritty nightlife street** art for Mohawk (crowd shots, hero plates, reels):
+When generating or extending Mohawk **street / lifestyle** art (crowd shots, hero plates, reels):
+
+**Face policy:** never show recognizable faces unless the user explicitly requests faces — see `mohawk-marketing-assets.mdc`.
 
 ## Mohawk figure
 
@@ -14,23 +16,29 @@ When generating or extending **gritty nightlife street** art for Mohawk (crowd s
 
 ## Reference female model 1
 
-- **Center of frame**, walking **away from camera** (with model 2).
 - Long **blonde wavy hair**.
-- **Tight short black dress** (thin straps), **black high heels**.
+- **Tight short black dress** (thin straps).
+- Default footwear in hero / night street: **black high heels**. Shoe studies also use **red heels**, **white heels**, or **red-white Converse high tops**.
 
 ## Reference female model 2
 
-- Beside model 1, walking **away from camera**.
-- Long **dark curly hair**.
-- **Brown or tan jacket/vest** over **short black skirt**, **patterned lace leggings or stockings**, **dark boots**.
+- Long **straight dark brown hair** (not curly).
+- **Brown or tan jacket/vest** over **short black skirt**, **patterned lace leggings or stockings**.
+- Default footwear in hero: **dark boots**. Same shoe studies as model 1: **red heels**, **white heels**, or **Converse high tops**.
+
+## Composition modes
+
+- **Together:** walking away from camera side by side (Mohawk hero, early model-ref plates).
+- **Split frame:** both in one shot, **not together** — separated in space, **different activities** (see `models-ref-split-*.jpg`).
 
 ## Canonical Mohawk static hero
 
 - **File:** `Site/img/mohawk-hero.jpg`
 - **Source plate:** gritty neon crowd night (`mohawk-hero-gritty-street-source.jpg` in `NewTowerArtWork/img/`)
-- Models 1 & 2 appear in the **center mid-ground** of this hero; Mohawk figure **foreground right**.
+- Models 1 & 2 appear in the **center mid-ground** of this hero; Mohawk figure **foreground right**. (Hero still shows model 2 with earlier curly-hair plate until re-shot.)
 
 ## Setting notes
 
 - Night, dense crowd, traffic, neon, steam — see gritty-street studies in `NewTowerArtWork/img/gritty-street/` when needed.
+- **Model-ref plates:** `Site/img/models-ref/` — together (`models-ref-daylight`, `-bar`, `-bookstore`); split + shoes (`models-ref-split-red-heels`, `-white-heels`, `-converse`). Archives in `NewTowerArtWork/img/models-ref/`.
 - Distant **stone obelisk tower** optional in other plates; hero is **street-only** (no tower required in frame).

@@ -1,0 +1,46 @@
+---
+description: Mohawk / New Tower website art — audience, tone, and face policy
+alwaysApply: true
+---
+
+# Mohawk marketing assets (site & app-adjacent art)
+
+## Product tone
+
+- **Mohawk** is an **indie, slightly rebellious RSS reader** — raw wire, user agency, not corporate news.
+- Visuals should feel **chosen**, not sold: editorial street/documentary, not stock “diverse team laughing at laptop.”
+
+## Audience (who should recognize themselves)
+
+- **Age:** early 30s through early 50s.
+- **Lives:** professionals, bartenders, tradespeople, creatives — **different jobs, same taste**.
+- **Values:** culture, options, depth, independence; they read, listen, argue, and curate.
+
+## What they have in common (show this, not demographics)
+
+- **Curiosity** — scanning a shelf, a feed, a street poster, a menu of possibilities.
+- **Taste** — worn-in quality (good coat, good boots, good bar, good bookshop), not club flash or luxury gloss.
+- **Agency** — one person choosing while another is elsewhere doing their own thing (split frame OK); never “targeted at you” smile.
+
+## Face policy (strict)
+
+- **Do not show recognizable faces** of human subjects unless the user **explicitly** asks for faces in that request.
+- Default framing: **from behind**, **over-shoulder** (face out of frame), **cropped above shoulders**, **in shadow/hat/hood**, **reflections without readable face**, **hands + object** (phone, paper, book spine).
+- Crowds: anonymous backs and silhouettes only.
+
+## What to avoid
+
+- Nightlife / hookup / “gritty for grit’s sake” as the default mood.
+- Generic hot-nightclub casting (miniskirts + heels as the hero grammar).
+- Readable UI mockups or logos unless requested.
+- Fantasy illustration; stay **photoreal** and **grounded** (near-future city OK per tower rules).
+
+## Cast continuity (when models appear)
+
+- Reference models 1 & 2 remain useful as **silhouette + wardrobe** cues from behind; update wardrobe toward **taste-forward indie** when scenes call for it (see `mohawk-scene-characters.mdc`).
+- Mohawk figure (black mohawk, patched jacket): same face policy unless hero shot specifies otherwise.
+
+## Reference files
+
+- Direction plates: `NewTowerArtWork/img/models-ref/` and `Site/img/models-ref/`
+- Preview: `NewTowerArtWork/models-ref-preview.html`

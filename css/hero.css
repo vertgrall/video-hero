@@ -128,14 +128,13 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
+  opacity: 1;
   z-index: 0;
-  transition: opacity 1.6s ease;
 }
 
 .hero-roadmap .hero-plate.is-visible {
   opacity: 1;
-  z-index: 1;
+  z-index: 0;
 }
 
 .roadmap-list {
